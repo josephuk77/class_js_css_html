@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 250px;
+        }
+        @media screen and (min-width:840px){
+            img{
+                width: 400px;
+                height: 500px;
+            }
+        }
+        @media screen and (min-width:1024px) {
+            img{
+                width: 600px;
+                height: 750px;
+                opacity: 0.5;    /* 투명도 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--
+         @media 미티어타입 and (조건){조건이 만족할 때 적용할 스타일}
+         @media screen and (max-width: 840px){
+            화면의 너비가 840px 이하일 때 적용될 스타일;
+         }
+    -->
+    <img src="image/img01.png">
+</body>
+</html>

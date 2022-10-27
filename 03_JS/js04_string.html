@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function test1(){
+            let doc = document.getElementById("area1");
+            console.log(doc);
+            
+            //문자열 합치기
+            let str01 = " String ";
+            let str02 = " Test ";
+            
+            //'+'연산자 사용
+            let str03 = str01+str02;
+            doc.innerHTML += "[문자열합치기]<br>";
+            doc.innerHTML += "'+'연산자: " + str03+"<br>";
+
+            //concat()
+            let newString = str01.concat(" Test ", " Java "," Script ");
+            doc.innerHTML += "concat(): " + newString+"<br>";
+
+            //join() : 특정 값을 배열 요소들 사이에 삽입해서 문자열로 반환
+            let joinTest = ["5","10","15","20","25"].join("+");
+            doc.innerHTML += "join(): " + joinTest+"<br>";
+
+            //[문자열 비교]
+            let str = prompt("이름 입력");
+
+            if(str == "multi"){
+                doc.innerHTML += str+"님, 환영합니다.<br>";
+            }
+            else if(str.toLowerCase == "multi"){
+                doc.innerHTML += str+"님, 환영합니다.<br>";
+            }
+            else{
+                console.log(str);
+                doc.innerHTML+= "이름을 확인해 주세요.<br>";
+            }
+
+            let numVal = 10;
+            if(numVal == "10"){
+                doc.innerHTML += "==연산자 사용 : 10이 맞습니다.<br>";
+            }else{
+                doc.innerHTML += "==연산사 사용 : 10이 아닙니다.<br>";
+            }
+
+            if(numVal === "10"){
+                doc.innerHTML += "===연산자 사용 : 10이 맞습니다.<br>";
+            }else{
+                doc.innerHTML += "===연산사 사용 : 10이 아닙니다.<br>";
+            }
+
+
+            doc.innerHTML += "<hr>";
+
+            //문자열 검색하기
+            //indexOf() : 왼쪽 -> 오른쪽으로 검색(첫번째 인덱스 반환)
+            //lastIndexOf() : 오른쪽 -> 왼쪽
+            str = "홍길동 이순신 이창진 유관순 홍길동";;
+            let prop = prompt("검색할 이름을 입력");
+            doc.innerHTML += "indexOf() : " + str.indexOf(prop) + "<br>";
+            doc.innerHTML += "lastIndexOf() : " + str.lastIndexOf(prop) + "<br>";
+
+        }
+
+        function test2(){
+            let div = document.getElementById("area1");
+            
+            //[문자열추출하기&나누기]
+            div.innerHTML += "[문자열 추출하기&나누기]<br>";
+
+            // substring() : 문자열을 시작 인덱스와 종료인덱스로 추출
+            // split() : 문자열에 기준이 되는 요소로 나누어서 배열로 저장
+            let strVal = "문자열 추출하기. 관련 함수 : indexOf, substring.";
+            let startIndex = strVal.indexOf(":");
+            let endIndex = strVal.lastIndexOf(".");
+            let subStr = strVal.substring(startIndex+1, endIndex);
+            div.innerHTML += "substring() : "+subStr+"<br>";
+
+            let splitVal = subStr.split(',');
+            div.innerHTML += "split() splitVal[0] : "+ splitVal[0]+"<br>";
+            div.innerHTML += "split() splitVal[1] : "+ splitVal[1]+"<br>"; 
+
+            div.innerHTML += "<hr>";
+
+
+
+        }
+    </script>
+    <style>
+        .area1{
+            border:1px solid red;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>String</h1>
+    <p>
+        " ",' '로 묶여 있는 리터럴이다. <br>
+        자바스크립트의 내장객체. 기본적인 메소드가 있다.
+    </p>
+    <button onclick="test1();">문자열 처리 메소드1</button>
+    <button onclick="test2();">문자열 처리 메소드2</button>
+    <div id="area1" class="area1" ></div>
+    
+</body>
+</html>

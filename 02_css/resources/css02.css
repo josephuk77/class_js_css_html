@@ -1,0 +1,120 @@
+/*타입(태그) 선택자*/
+pre{
+    text-align: center;
+}
+/*태그 선택자를 이용하여 h1 태그를 오른쪽 정렬 시키고
+ 글자 색을 파란색으로 적용시켜보자*/
+
+h1{
+    text-align: right;
+    color: blue;
+}
+
+/*id 선택자*/
+#sid01{
+    color: green;
+}
+
+#sid02{
+    color: lime;
+}
+
+#sid03{
+    color: turquoise;
+}
+
+/*class 선택자*/
+#scls01{
+    color: blue;
+}
+.scls{
+    color: hotpink;
+}
+
+/*전체 선택자*/
+
+/* *{
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+/*자식 선택자*/
+
+#at > p{
+    color: orange;
+}
+
+div>p{
+    color: silver;
+}
+
+
+/*인접 선택자*/
+h3+b{
+    background-color: black;
+    color: white;
+}
+
+span+b{
+    background-color:yellow;
+    color: aqua;
+}
+
+/*속성 선택자*/
+p[title]{
+    color: skyblue;
+}
+
+p[title='b']{
+    background-color: yellow;
+}
+
+p[name]{
+    color: brown;
+}
+
+/*가상클래스 선택자*/
+a:link{
+    color: pink;
+    font-size: 20pt;
+} /*방문하기 전 링크*/
+a:visited{
+    color: brown;
+}/*방문 후 링크*/
+
+a:active{
+    color: red;
+}/*클릭하고 있을 때*/
+
+
+input:checked{
+    width: 200px;
+    height: 200px;
+}
+
+
+a:hover{
+    background-color: purple;
+}/*마우스가 올라가 있는 동안에 실행*/
+
+
+
+/* 종속선택자 */
+li.acls01{
+    font-size: 40px;
+}
+li.acls02#sidli{
+    background-color: darkturquoise;
+}
+
+/* 하위 선택자 */
+div span{
+    background-color: yellow;
+}
+
+/* 그룹 선택자 */
+p, pre, strong{
+    color: lime;
+}

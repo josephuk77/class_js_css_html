@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3.외부작성방식 -->
+    <script type="text/javascript" src="js/test.js"></script>
+    <!-- 2.내부작성방식 -->
+    <script type = "text/javascript">
+       function test01(){
+            alert('test1');
+            let doc = document.getElementsByTagName("li")[1];
+            doc.style.color = "red";
+            doc.innerHTML = "<strong>글자가 바뀝니다.</strong>"
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>자바 스크립트</dt>
+        <dd>
+            인터프리터 방식의 객체지향 프로그래밍 언어.<br>
+            ECMA 스크립트 표준을 따르는 대표적인 웹 기술.
+        </dd>
+    </dl>
+    <h1>자바스크립트의 작성 방식 3가지</h1>
+    <ol>
+        <!-- inline작성방식 -->
+        <li onclick="alert('inline')">inline방식</li>
+        <li onclick="test01();">내부작성방식</li>
+        <li onclick="test2();">외부링크방식</li>
+    </ol>
+</body>
+</html>

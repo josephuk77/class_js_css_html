@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let num = 1;
+        function nextGallary(){
+            num++;
+            if(num>3){
+                num=1;
+            }
+            document.getElementById("gallery").src= "../02_css/image/img0"+num+".png";
+           
+            return false;
+        }
+        function prevGallery(){
+            num--;
+            if(num<1){
+                num=3;
+            }
+            document.getElementById("gallery").src =  "../02_css/image/img0"+num+".png";
+            return false;
+        }
+    </script>
+
+    <style>
+        #gallery{
+            width: 200px;
+            height: 250px;
+        }
+        a{text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div id="glleryWrap">
+        <a onclick="return prevGallery();" href="https://www.naver.com">⏩</a>
+        <img src="../02_css/image/img01.png" id="gallery" alt="">
+        <a onclick="return nextGallary();" href="https://www.google.com">⏩</a>
+    </div>
+</body>
+</html>

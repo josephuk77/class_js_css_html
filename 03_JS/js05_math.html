@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function test1(){
+            let doc = document.getElementById("area1");
+            let num1 = -123;
+            doc.innerHTML += "절댓값 : " + Math.abs(num1)+"<br>";
+            doc.innerHTML += "난수 : " + Math.random()+"<br>";
+            doc.innerHTML += "버림 :" + Math.floor(123.456)+"<br>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Math</h1>
+    <button onclick="test1();">숫자 처리 메소드</button>
+    <div id="area1" class="area1"></div>
+   
+    <style>
+        .area1{
+            border:1px solid blue;
+            height: 400px;
+        }
+    </style>
+</body>
+</html>

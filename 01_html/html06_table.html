@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        표를 만드는 태그
+        <table> : 기본적인 태이블을 생성해주는 태그
+        <tr> : 테이블의 행을 나타내는 태그
+        <th> : 표의 제목 셀을 나타내는 태그
+        <td> : 표의 일반 셀을 나타내는 태그 
+    -->
+    <h2>기본 테이블 만들기</h2>
+    <table border="1" style="width: 300px;">
+        <tr style="background-color: gray;">
+            <th>컬럼01</th>
+            <th>컬럼02</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+
+    </table>
+    <table border="1">
+        <caption>테이블 제목</caption>
+        <colgroup>
+            <col width="100px">
+            <col width="200px">
+            <col width="300px">
+        </colgroup>
+        <tfoot>
+            <tr>
+                <td>f1</td>
+                <td>f2</td>
+                <td>f3</td>
+            </tr>
+        </tfoot>
+        <thead>
+            <tr>
+                <th>컬럼01</th>
+                <th>컬럼02</th>
+                <th>컬럼03</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+       
+    </table>
+
+    <hr>
+    <h2>테이블 셀 병합하기</h2>
+    <table border="1">
+        <caption>병합 테이블</caption>
+        <thead style="background-color: pink;">
+            <tr>
+                <th>컬럼1</th>
+                <th>컬럼2</th>
+                <th>컬럼3</th>
+                <th>컬럼4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1(세로 합치기</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td colspan="2">6(가로 합치기)</td>
+                <!--<td>7</td>-->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">가로합치기</td>
+            </tr>
+        </tfoot>
+    </table>
+        <!--
+            div : 줄바꿈(블록요소)
+            span : 줄바꿈x(인라인요소)
+        -->
+     <h1>영역 관련 태그</h1>
+    <h3>div태그</h3>
+    <div style="border: 1px soild black; background:red;width: 100px;height: 100px;">첫번째 영역</div>
+    <div style="border: 1px soild black; background:yellow;width: 100px;height: 100px;">두번째 영역</div>
+    <div style="border: 1px soild black; background:green;width: 100px;height: 100px;">세번째 영역</div>
+    <h3>span태그</h3>
+    <span style="border: 1px soild black; background:red;width: 100px;height: 100px;">첫 번째 영역</span>
+    <span style="border: 1px soild black; background:yellow;width: 100px;height: 100px;">두 번째 영역</span>
+    <span style="border: 1px soild black; background:green;width: 100px;height: 100px;">세 번째 영역</span>
+
+    <h3>div와 span</h3>
+    <b>div 영역</b>
+    <div style="background-color: yellow;">장애 학생들에게 대학 입학의 문은 여전히 높은 벽으로 드러났다.
+
+        더불어민주당 강민정 의원(국회 교육위원회)이 공개한 자료에 따르면 국내 4년제 대학 109개교의 특수교육대상자 특별전형 모집인원이 총 1622명이었으나 실제 선발돼 등록한 장애 학생은 827명에 그쳐 모집인원 대비 등록인원이 51%에 불과했다.   
+        </div>
+    <b>span 영역</b>
+    <span style="background-color: skyblue;">장애 학생들에게 대학 입학의 문은 여전히 높은 벽으로 드러났다.
+
+        더불어민주당 강민정 의원(국회 교육위원회)이 공개한 자료에 따르면 국내 4년제 대학 109개교의 특수교육대상자 특별전형 모집인원이 총 1622명이었으나 실제 선발돼 등록한 장애 학생은 827명에 그쳐 모집인원 대비 등록인원이 51%에 불과했다.   
+        </span>
+</body>
+</html>

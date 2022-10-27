@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- js -->
+<script>
+    var class402 = new Array("남기준",'윤길재','조아라','안소진','박은영','박지영','이창진','김지환');
+    function show(){
+        var ran = Math.floor(Math.random()*(class402.length));
+        document.getElementsByTagName("p")[0].innerHTML = class402[ran];
+    }
+
+</script>
+
+<!-- css -->
+<style>
+    p{
+        color: hotpink;
+        font-size: 100px;
+        background-color: blue;
+    }
+
+</style>
+
+</head>
+<body>
+    <h1>자기소개서</h1>
+    <table border="10">
+        <tr>
+            <th>이름</th>
+            <td><input type="text"></td>
+            <th>나이</th>
+            <td><input type="text"></td>
+            
+        </tr>
+        <tr>
+            <th>성장과정</th>
+            <td colspan="4"><textarea rows="10" cols="100"></textarea></td>
+        </tr>
+    </table>
+    <hr>
+    <button onclick="show();">클릭</button>
+    <p></p>
+    
+</body>
+</html>

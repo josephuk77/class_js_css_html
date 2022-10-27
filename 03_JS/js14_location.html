@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function locTest(){
+            //location : url 관련 객체
+
+            //페이지 이동
+            //location.href="https://www.naver.com";
+
+            //페이지 이동(href와 같다.)
+            // location.assign("https://www.naver.com")
+
+            //페이지 이동(전단계 이력x)
+            // location.replace("https://www.google.com");
+
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.google.com">구글</a>
+    <button onclick="locTest();">이동</button>
+</body>
+</html>

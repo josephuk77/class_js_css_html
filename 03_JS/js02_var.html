@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var test=1;
+        console.log(test);
+        
+        let test2=2;
+        console.log(test2);
+
+        const test3=3;
+        console.log(test3);
+
+        {
+            var no1=10;
+            let no2=20;
+            const no3=30;
+        }
+        console.log(no1); // var hosting
+
+        let variable=10; //전역변수 : 공용으로 사용, 값 유지됨
+        function test01(){
+            variable = variable+5;
+            document.getElementById("v01").innerHTML = "<b style='color:red; background:yellow;'>"+variable+"</b>";
+
+        }
+        function test02(){
+            const variable2 = variable +100;
+            document.getElementById("v02").innerHTML = "<b>"+variable2+"</b>"
+        }
+
+        function test03(){
+            let variable3 = "문자";
+            console.log(variable3+" : "+typeof variable3);
+            console.log(`${variable3} : ${typeof variable3}`);
+
+            variable3 = 5;
+            console.log(variable3+" : "+typeof variable3);
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h1>변수</h1>
+    <h3>변수의 범위</h3>
+    <p>
+        1. 전역변수 : 다른 함수에서 공용으로 사용할 수 있다.(값 유지)
+        <button onclick="test01();">확인</button>
+    </p>
+    <div id="v01"></div>
+    <br>
+    <p>2. 지역변수 : 함수나 객체 내부에서 선언. 실행이 종료되면 사라진다
+        <button onclick="test02();">확인</button>
+    </p>
+    <div id="v02"></div>
+
+    <br>
+    <h3>변수의 선언과 저장</h3>
+    <p>
+        1. var let, const 키워드를 사용하여 변수선언
+        <button onclick="test03();">확인</button>
+    </p>
+    <h3>변수의 선언과 저장</h3>
+    1. 문자타입(String) <br>
+    2. 숫자(number) <br>
+    3. 논리(boolean) <br>
+    4. 널(NULL) <br>
+    5. 객체(Object) <br>
+    6. 함수(Function)
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //1.
+        function myClass22(){
+            this.name = "multi";//외부에서 접근 가능
+            let name02 = "401강의장";//외부에서 접근 불가능
+            this.getName02=function(){
+                return name02;
+            }
+          
+        }
+        //2.
+        const myClass22_2 = {
+            name: "multicampus",
+            print:function(){
+                alert(myClass22_2.name+" : print")
+                return myClass22_2.name;
+            }
+        }
+
+        myClass22.prototype.printname=function(){
+            let abc = "메롱";
+            alert(this.name + "," + this.getName02()+" : prototype "+abc);
+        }
+
+        function objTest(){
+            let cls = new myClass22();
+            console.log(cls.name);
+            console.log(cls.name02);
+            console.log(cls.getName02());
+            
+            
+            //let cls2 = new myClass22_2.name;
+            //console.log(cls2);
+            console.log(myClass22_2.name);
+            myClass22_2.print();
+            
+            cls.printname();
+
+            let cls2 = new myClass22();
+            cls2.printname();
+        }
+    </script>
+</head>
+<body>
+    <h1>객체</h1>
+    <h3>객체: 관련된 데이터와 함수의 집합니다.</h3>
+    <h4>객체의 구성<br>
+        -함수 : 기능 정의
+        -속성 : 객체 내부 데이터
+        -this : 객체 내부의 메소드나 속성을 정의할 때 사용
+        -프로토타입 : 객체의 확장
+
+    </h4>
+    <h4>객체는 키값을 사용 하여 속성을 식별, 중괄호{}를 사용해서 객체를 생성</h4>
+    <pre>
+        let 객체(function 객체) ={
+            속성명: 속성값,
+            속성명: 속성값,
+            ....
+        }
+        키:벨류
+    </pre>
+    <button onclick="objTest();">객체</button>
+</body>
+</html>

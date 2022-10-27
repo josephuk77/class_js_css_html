@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outputVal(){
+            const doc = document.querySelector("#result");
+            const docPN = document.getElementById("productName");
+            const docPA = document.querySelector("#productAmount");
+            const docPL = document.querySelector("#productAmount");
+            const docTX = document.getElementsByTagName("textarea")[0];
+
+            doc.innerHTML+="상품명 : "+docPN.value+"<br>";
+            doc.innerHTML+="납품등급 : "+docPA.value+"<br>";
+            doc.innerHTML+="납품수량 : "+docPL.value+"<br>";
+            doc.innerHTML+="기타사항 : "+docTX.value+"<br>";
+
+            return false;
+        }
+      
+
+    </script>
+    <style>
+        #result{
+            width: 400px;
+            height: 200px;
+            background-color: greenyellow;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>연습2</h2>
+    <form action="">
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li>
+                    <label for="goodlist">상품명: </label>
+                    <input type="text" id="productName" list="goodlist" required>
+                    <datalist id="goodlist">
+                        <option value="dog1004">도그1004</option>
+                        <option value="catfry">고양이튀김</option>
+                        <option value="rabmilk">토끼우유</option>
+                    </datalist>
+                </li>
+                <li>
+                    <label for="number">납품 수량 : </label>
+                    <input type="number" id="productAmount" min="10" max="100" step="10" placeholder="최소10개">
+                </li>
+                <li>
+                    <label for="range">납품 등급 : </label>
+                    <input type="range" id="productLevel" min="0" max="10" step="2">
+                </li>
+                <li>
+                    <label for="message">기타사항</label>
+                    <textarea rows="5" cols="30"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <input type="submit" value="send message" onclick="return outputVal();">
+        <br><br>
+        <div id="result"></div>
+    </form>
+    
+</body>
+</html>

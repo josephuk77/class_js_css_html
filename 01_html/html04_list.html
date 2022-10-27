@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--목록과 관련된 태그들(list)-->
+    <h1>순서 없는 목록 태그</h1>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    <p>순서 없는 목록의 기호는 css를 통해서 변경 가능하다.</p>
+
+    <h1>순서 있는 목록 태그</h1>
+    <ol>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ol>
+    <p>
+        순서 있는 목록의 숫자는 속성을 이용항 변경 가능하다<br>
+        기본값은 숫자, 1부터 시작
+    </p>
+
+    <h1>순서 있는 목록 태그 속성 변경</h1>
+    <h3>영문 소문자로 표기</h3>
+    <ol type="a">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ol>
+    <h3>로마 숫자 소문자로 표기</h3>
+    <ol type="i">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ol>
+
+    <h3>시작 값 변경하기</h3>
+    <ol start="5"  type="I">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ol>
+
+    <!-- 설명 목록 태그 -->
+    <h1>설명 목록 태그</h1>
+    <dl>
+        <dt>이곳은 목록의 제목을 적는 곳 입니다.</dt>
+        <dd>이곳은 목록에 대한 설명을 적는 곳 입니다.</dd>
+        <dd>여러 줄을 작성 할 수도 있다.</dd>
+        <dt>또 다른 목록의 제목을 적어 새로운 목록을 만들 수 있습니다.</dt>
+        <dd>새로운 목록의 설명도 작성할 수 있습니다.</dd>
+        <dd>여러줄 잙성 가능하다</dd>
+        <dd>목록 별로 행을 다르게 할 수도 있다</dd>
+    </dl>
+
+    <!--목록 태그들을 중첩해서 사용 가능하다.-->
+    <h3>목록 태그 중첩</h3>
+    <h4>학원 오는 순서</h4>
+    <ul>
+        <li>눈을 뜬다</li>
+        <li>일어나서 물을 마신다</li>
+        <li>
+            씻는다.
+            <ul>
+                <li>양치한다.</li>
+                <li>머리를 감는다.</li>
+                <li>세수를 한다.</li>
+                <li>면도를 한다.</li>
+                <li>몸을 씻는다.</li>
+            </ul>
+        </li>
+        
+        <li>웃을 입고 티비를 켜 뉴스를 본다.</li>
+        <li>커피를 마신다.</li>
+        <li>출발한다.</li>
+
+    </ul>
+</body>
+</html>

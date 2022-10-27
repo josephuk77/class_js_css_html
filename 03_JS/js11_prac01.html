@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function output(){
+            const doc = document.getElementById("area");
+            const docQS = document.querySelector("input");
+            const docId = document.getElementById("pname");
+            const docName = document.getElementsByName("price");
+
+
+            doc.innerHTML = "구입자 : "+docQS.value+"님<br>";
+            doc.innerHTML += "구입상품 : "+docId.value+"<br>";
+            doc.innerHTML += "구매가격 : "+docName[0].value+"만원"
+            
+            doc.style.border="1px solid black";
+            doc.style.backgroundColor = "yellow";
+            doc.style.width="400px";
+            doc.style.height="250px";
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>연습 2</h2>
+    구매자 : <input type="text" placeholder="구매자의 이름을 입력하세요">
+    <br><br>
+    상품평 : <input type="text" id="pname" placeholder="구매 가격을 입력하세요.">
+    <br><br>
+    가격 : <input type="text" name="price" placeholder="구매 가격을 입력하세요.">
+    <br><br>
+    <button onclick="output();">입력값 출력하기</button>
+    <div id="area"></div>
+</body>
+</html>
