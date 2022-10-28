@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show01(){
+            let food = document.getElementsByName("food")[0];
+
+            //selectedIndex : 선택한 option태그의 인댁스 반환
+            let idx = food.selectedIndex;
+            //alert(idx);
+
+            if(idx != 0){
+                //options : select가 가지고 있는 option태그들
+                let foodVal =food.options[idx].value;
+                alert(foodVal+"먹고싶다.");
+            }
+        }
+
+        function show02(){
+            let food = document.getElementsByName("food")[1];
+            let str = "";
+
+            for(let i=0;i<food.options.length;i++){
+                //selected : 옵션태그의 선택 여부
+                if(food.options[i].selected){
+                    str += food.options[i].value + " ";
+                }
+            }
+
+            alert(str+"먹고싶다!!!!!!");
+        }
+    </script>
+
+</head>
+<body>
+    <h1>음식 선택하기</h1>
+    <form>
+        <select name="food" onchange="show01();">
+            <option>---선택---</option>
+            <option value="떡볶이">떡볶이</option>
+            <option value="짜파게티">짜파게티</option>
+            <option value="피자">피자</option>
+            <option value="햄버거">햄버거</option>
+            <option value="곱창">곱창</option>
+        </select>
+            <br><br><br><br>
+        <select name="food" multiple="multiple" size="5">
+            <option>---선택---</option>
+            <option value="떡볶이">떡볶이</option>
+            <option value="짜파게티">짜파게티</option>
+            <option value="피자">피자</option>
+            <option value="햄버거">햄버거</option>
+            <option value="곱창">곱창</option>
+         </select>    
+            <button onclick="show02();">선택</button>
+    </form>
+</body>
+</html>

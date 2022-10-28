@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addAppend(){
+            let fieldset = document.getElementById("addele");
+
+            //1. 생성
+            var p = document.createElement("p");
+            //2. text 추가
+            p.textContent = "자식태그들 중 마지막에 붙여넣는다!!!!";
+
+            //3. fieldset에 추가
+            fieldset.appendChild(p);
+        }
+
+        function addBefore(){
+            let newP = document.createElement("p");
+            let fieldset = document.getElementById("addele");
+            let oldDiv = document.querySelector("fieldset>div");
+
+
+            newP.textContent = "엘리먼트의 앞에 붙여넣는다."
+
+            fieldset.insertBefore(newP,oldDiv)
+        }
+
+        function moveEle(){
+            let moveele = document.querySelector("fieldset").children[1];
+            console.log(moveele);
+
+            document.body.appendChild(moveele);
+        }
+    </script>
+</head>
+<body>
+    <h1>태그 추가하기</h1>
+    <button onclick="addAppend();">append</button>
+    <button onclick="addBefore();">insertBefore</button>
+    <button onclick="moveEle();">appenChild를 이용한 엘리먼트 이동</button>
+    <br>
+    <fieldset id="addele">
+        <legend>부모태그</legend>
+        <div>div</div>
+    </fieldset>
+</body>
+</html>

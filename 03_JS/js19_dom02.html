@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function creat(){
+            //엘리먼트 객체 생성하기
+            let div = document.createElement("div");
+            //<div></div>
+            console.log(div);
+
+            //텍스트 객체 생성하여 div에 추가
+            let txt = document.createTextNode("엘리먼트 생성 메소드");
+            div.appendChild(txt);
+            //<div>엘리먼트 생성 메소드</div>
+
+
+            //1. 스타일변경
+            //속성
+            let attr = document.createAttribute("style");
+            //style="";
+            attr.nodeValue="border:2px solid blue";
+            //style="border: 2px solid blue";
+
+
+            //2. 스타일변경
+            //div.setAttribute("style","border:2px solid blue");
+            div.setAttributeNode(attr);
+            //<div style="border: 2px solid blue">엘리먼트 생성 메소드</div>
+
+            document.body.appendChild(div);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="creat();">엘리먼트 생성하기</button>
+    
+</body>
+</html>
