@@ -5,7 +5,94 @@
 <title>화이팅!</title>
 
 <script>
+	function answer01(){
+		let input = document.getElementById("q01").value;
 
+		alert(parseInt(input)+10);
+	}
+
+	function answer02(){
+		let doc = document.getElementById("numberArr").innerHTML;
+		let input = document.getElementById("inputVal").value;
+		let docsplit = doc.split(" ");
+		let a = -1;
+		for(let i=0;i<docsplit.length;i++){
+			if(docsplit[i]==input){
+			a=docsplit[i];
+			}
+		}
+
+		if(a==-1){
+			alert("해당 숫자는 존재하지 않습니다.")
+		}else{
+			alert(a);
+		}
+		
+	}
+
+	function answer03(){
+		let doc = document.getElementsByName("rdo");
+		if(doc[0].checked){
+			location.href="https:www.naver.com";
+		}else if(doc[1].checked){
+			location.href="https:www.google.com";
+		}else if(doc[2].checked){
+			location.href="https:www.w3schools.com";
+		}
+	}
+
+	function answer04(){
+		let doc = document.getElementsByName("subject");
+		doc[0].checked=true;
+	}
+
+	function answer05(){
+		let doc = document.getElementById("randomVAl");
+		doc.value = Math.floor(Math.random()*45+1);
+	}
+
+	function answer06(){
+		let doc = document.getElementById("selOption");
+		for(let i = 0; i<doc.options.length;i++){
+			if(doc.options[i].selected){
+				if(doc.options[i].value == "naver"){
+				window.open("https://www.naver.com","_blank","width=800px height=600px");
+			}else if(doc.options[i].value == "google"){
+				window.open("https://www.google.com","_blank","width=800px height=600px");
+			}else if(doc.options[i].value == "w3schools"){
+				window.open("https://www.w3schools.com","_blank","width=800px height=600px");
+			}
+			}
+			
+		}
+	}
+
+	function answer07(){
+		let doc = document.getElementById("numList");
+		console.log(doc.innerHTML);
+		let numArr=doc.innerHTML.split(",");
+		numArr.sort();
+		alert(numArr);
+	}
+
+	function answer09(){
+		let num = document.getElementById("dan").value;
+		console.log(typeof(num));
+		let timesTB = "";
+		for(let i=0;i<9;i++){
+			let count =i+1
+			timesTB += num +" * " + count +" = "+ num*count+"  ";
+
+		}
+		alert(timesTB)
+	}
+
+	function answer10(){
+		let input = document.getElementById("inputName").value;
+		let str = document.getElementById("addVal").innerHTML;
+
+		alert(input+str);
+	}
 </script>
 
 </head>
