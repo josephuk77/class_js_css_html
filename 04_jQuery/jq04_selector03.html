@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+        function click01(){
+            let inputVal = $("input:text").val();
+            alert("value : "+inputVal);
+            //js = .value
+            //jq = .val()
+        }
+
+        function click02(){
+            let inputVal = $("input:radio").val();
+            alert(inputVal);
+        }
+
+        $(function(){
+            //$(function(){}) == window.onload
+            let selEle = document.getElementsByTagName("select")[0];
+            selEle.onchange=function(){
+                alert(selEle.options[selEle.selectedIndex].value);
+            }
+        });
+    </script>
+</head>
+<body>
+    <form action="">
+
+    </form>
+        <input type="text">
+        <input type="button" value="선택" onclick="click01();">
+        <input type="radio" value="22/09/19~" onclick="click02();">22년 9월 19일~
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+</body>
+</html>
