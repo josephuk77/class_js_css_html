@@ -40,7 +40,35 @@
 
             variable3 = 5;
             console.log(variable3+" : "+typeof variable3);
+
+            variable3 = true;
+            console.log(variable3+" : "+typeof variable3);
+
+            variable3 = null;
+            console.log(variable3+" : "+typeof variable3);
+
+            variable3 = [1,2,4,6,3,6];
+            console.log(variable3+" : "+typeof variable3);
+            variable3 = {name:'이창진', age: 19};
+            console.log(variable3+" : "+typeof variable3);
+
+            variable3 = function(){
+                alert("함수 저장");
+            }
+            console.log(variable3+" : "+typeof variable3);
+            variable3();
         }
+
+        function number1(){
+            const no1 = 1/0;
+            const no2 = -1/0;
+            const no3 = 'string'/2;
+
+            console.log(no1);
+            console.log(no2);
+            console.log(no3);
+        }
+        number1();
 
         
     </script>

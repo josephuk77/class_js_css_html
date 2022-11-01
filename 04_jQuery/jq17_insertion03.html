@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu{
+            background-color: hotpink;
+            text-align: right;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #menu div{
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .box{
+            border: 2px solid blue;
+        }
+    </style>
+    <script src="./js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            let $box = $("<div>").addClass("box");   // <div class='box'></div>
+            $(".sub_menu:first").wrap($box);
+            
+            $(".sub_menu").click(function(){
+                $(".sub_menu").each(function(){
+                    if($(this).parent().is(".box")){
+                        $(this).unwrap(".box");
+                    }
+                });
+
+                $(this).wrap($box);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <div class="sub_menu">
+            <a href="#">레인보우샤벳</a>
+            
+        </div>
+
+        <div class="sub_menu">
+            <a href="#">초코나무 숲</a>
+        </div>
+
+        <div class="sub_menu">
+            <a href="#">민트초코칩</a>
+        </div>
+
+        <div class="sub_menu">
+            <a href="#">나와라 꼬북이</a>
+        </div>
+
+        <div class="sub_menu">
+            <a href="#">피카피카피카츄</a>
+        </div>
+
+    </div>
+</body>
+</html>
